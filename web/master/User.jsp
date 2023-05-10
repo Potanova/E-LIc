@@ -68,8 +68,8 @@
                 <div class="row">
                     <div class="col-md-2">
                         <div class="form-group">
-                            <label>Level</label>
-                                <select class="form-control select2" name="TypeV" required="true"  id="TypeV1" >
+                            <label>Level</label><br>
+                            <select class="form-control select2" name="TypeV" required="true"  id="TypeV1" >
                                 <option value=""></option>
                                 <option value="Penguji">PENGUJI</option>
                                 <option value="Peserta">PESERTA</option>

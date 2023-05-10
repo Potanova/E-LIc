@@ -66,7 +66,7 @@
         <div class="col-md-12">
             <form method="post" action="Report/CetakRiwayat.jsp" target="blank_">
             <input type="hidden" name="IDU" value="<%=ip%>"> 
-            <input type='submit' name='submit' value='Cetak Riwayat' class='btn-xs btn-primary'>
+            <input type='submit' name='submit' value='Cetak Riwayat' class='btn-xs btn-success'>
             </form>
         </div>
                                            

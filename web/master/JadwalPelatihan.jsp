@@ -68,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group">
-                            <label>JENIS PELATIHAN</label>
+                            <label>JENIS PELATIHAN</label><br>
                             <select name="jepel" class="form-control select2" required>
                                 <option value=""></option>
                                 <%                               

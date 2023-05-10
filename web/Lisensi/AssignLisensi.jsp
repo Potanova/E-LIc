@@ -68,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label>JADWAL PELATIHAN</label>
+                            <label>JADWAL PELATIHAN</label><br>
                             <select name="jp" class="form-control select2" required>
                                 <option value=""></option>
                                 <%                                

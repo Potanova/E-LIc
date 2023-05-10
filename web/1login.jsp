@@ -34,7 +34,7 @@
     }
     
     function goToCreateUser() {
-        window.location.href = "index-tamu.jsp";
+        window.location.href = "Peserta.jsp";
     }
 </script>
 

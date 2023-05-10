@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label>Level</label>
+                            <label>Level</label><br>
                                 <select class="form-control select2" name="TypeV" required="true"  id="TypeV1" >
                                 <option value=""></option>
                                 <option value="BEGINNER">BEGINNER</option>
