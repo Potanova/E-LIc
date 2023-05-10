@@ -134,7 +134,7 @@
                                         + "INNER JOIN `jadwalpelatihan` ON `jenispelatihan`.`IdPel` = `jadwalpelatihan`.`IdPel` "
                                         + "INNER JOIN `prosespelatihan` ON `prosespelatihan`.`IdJadwal` = `jadwalpelatihan`.`IdJadwal` "
                                         + "INNER JOIN `user` ON `prosespelatihan`.`IdUser` = `user`.`IdUser` "
-                                        + "WHERE (`prosespelatihan`.`IdUser` = '"+ip+"' OR `user`.`Level` = 'admin') AND `prosespelatihan`.`Status`='ON'";
+                                        + "WHERE `prosespelatihan`.`IdUser` = '"+ip+"' OR `user`.`Level` = 'admin' AND `prosespelatihan`.`Status`='ON'";
                                 ResultSet res = stm.executeQuery(SQLList);
                                 System.out.println("SQLList="+SQLList);
                                 int NoUrut = 1;

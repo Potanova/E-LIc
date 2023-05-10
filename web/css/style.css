@@ -345,7 +345,11 @@ a:focus {
     background: #ffffff;
 }
 
-.hero .hero-btn .btn:first-child {
+.hero .hero-btn 
+.btn:first-child {
+    margin-right: 10px;
+}
+.btn2:first-child {
     margin-right: 10px;
 }
 
@@ -366,6 +370,11 @@ a:focus {
         padding: 12px 30px;
         letter-spacing: 1px;
     }
+    
+    .hero .hero-text .btn2 {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -383,6 +392,12 @@ a:focus {
         font-weight: 400;
         letter-spacing: 1px;
     }
+    
+    .hero .hero-text .btn2 {
+        padding: 10px 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -396,6 +411,13 @@ a:focus {
     }
     
     .hero .hero-text .btn {
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+    
+    .hero .hero-text .btn2 {
         padding: 8px 10px;
         font-size: 12px;
         font-weight: 400;

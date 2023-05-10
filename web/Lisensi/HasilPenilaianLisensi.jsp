@@ -64,7 +64,17 @@
 <div class="row">
     <div class="col-md-10 col-md-offset-1 col">
         <div class="col-md-12">
+            <form method="post" action="Report/CetakRiwayat.jsp" target="blank_">
+            <input type="hidden" name="IDU" value="<%=ip%>"> 
+            <input type='submit' name='submit' value='Cetak Riwayat' class='btn-xs btn-primary'>
+            </form>
+        </div>
+                                           
+        <div class="col-md-12">
             <div class="table-responsive">
+                <% 
+                
+                %>
                 <table id="example1" class="table table-bordered table-striped">
                     <thead style="color: #fff; background-color: #053A6E; border-color: #053A6E;">
                         <tr>

@@ -105,7 +105,7 @@
                                         out.print("<td align='center'>"
                                             + "<form method='post' action=''>"
                                             + "<input type='hidden' name='IDPD' value='" + res.getString("IDPD") + "'>"
-                                            + "<input type='submit' name='Hapus' value='Scoring' class='btn-xs btn-success'>"
+                                            + "<input type='submit' name='' value='Scoring' class='btn-xs btn-success'>"
                                             + "</form>"
                                             + "</td>");
                                     out.print("</tr>");

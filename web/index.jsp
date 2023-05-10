@@ -57,7 +57,7 @@
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
 </head>
 
-<body class="hold-transition skin-purple sidebar-mini">
+<body class="hold-transition skin-green sidebar-menu">
     <div class="wrapper">
         <header class="main-header">
             <!-- Logo -->
