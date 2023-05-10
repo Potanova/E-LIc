@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FormPoRak" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="698" leftMargin="72" rightMargin="72" topMargin="72" bottomMargin="72" uuid="b8b3d519-eeb3-43f4-94aa-def195a1cbe2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="223"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="767"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Capricon"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="260"/>
+	<parameter name="DEVA_VALUE" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="par_IdPendaf" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+  `prosespelatihan`.`IdPendaftaran`,
+  `prosespelatihan`.`IdUser`,
+  `user`.`NamaLengkap`,
+  `prosespelatihan`.`IdJadwal`,
+  `jadwalpelatihan`.`TglPelaksanaan`,
+  `jadwalpelatihan`.`Waktu`,
+  `jadwalpelatihan`.`IdPel`,
+  `jenispelatihan`.`NamaPelatihan`,
+  `jenispelatihan`.`Level`,
+  `prosespelatihan`.`Skor`,
+  `prosespelatihan`.`Status`,
+  `prosespelatihan`.`StatLulus`,
+  `prosespelatihan`.`StatPenilaian`, `user`.`Alamat`
+FROM
+  `prosespelatihan`
+  INNER JOIN `user` ON `prosespelatihan`.`IdUser` = `user`.`IdUser`
+  INNER JOIN `jadwalpelatihan` ON `jadwalpelatihan`.`IdJadwal` =
+    `prosespelatihan`.`IdJadwal`
+  INNER JOIN `jenispelatihan` ON `jenispelatihan`.`IdPel` =
+    `jadwalpelatihan`.`IdPel`
+where
+  `prosespelatihan`.`IdPendaftaran`= $P{par_IdPendaf} and `prosespelatihan`.`Status`='on']]>
+	</queryString>
+	<field name="IdPendaftaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdUser" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaLengkap" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdJadwal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TglPelaksanaan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Waktu" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IdPel" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaPelatihan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Skor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatLulus" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StatPenilaian" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Alamat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="NOURUT" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$V{NOURUT}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="126" y="0" width="408" height="39" uuid="a04fb36d-7277-4ed3-9be3-5a59d8356757"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISENSI PELATIHAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="267" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="58" width="61" height="20" uuid="e865b736-a8b6-4ebd-975b-112c22f26173"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ID USER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="61" height="20" uuid="160f41db-aea9-40c2-9ba5-3b838b72622f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Alamat ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="58" width="10" height="20" uuid="95b7297a-d804-4c8b-8295-5b4ea7ec0e14"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="78" width="10" height="20" uuid="c9e2dc22-4370-422d-86eb-d3068df1fea1"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="30" width="24" height="20" uuid="6402c29b-6fcb-4ad7-9949-4f6c86cb8f5f"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="503" y="30" width="195" height="20" uuid="f64bbd29-257d-430b-8f53-b0e330ed1e30"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdPendaftaran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="488" y="30" width="10" height="20" uuid="110737ff-e529-430d-a659-caa0199c6a61"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="71" y="58" width="159" height="20" uuid="b9f5a896-3cd7-4f8e-8f5f-e6afd64f4799"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IdUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="78" width="159" height="46" uuid="ed228606-43d9-4578-ba66-2062cde72944"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="191" width="697" height="23" uuid="045ec3a9-039b-498c-b6a5-2bfdbd47b86f"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Skor : "+$F{Skor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="138" width="697" height="39" uuid="040b214c-bea8-457c-95d7-812c00e2242a"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NamaLengkap}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="224" width="697" height="23" uuid="3ec9aee0-dc9d-4ebf-9bb3-5e1ca65d0f07"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Predikat : "+$F{StatLulus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="205" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="169" width="120" height="20" uuid="08f77e61-e39a-4a70-bd7e-8b6907cd6e40"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="86" width="66" height="20" uuid="2ef58a57-c8df-406f-b408-e89b3602f129"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Menerima,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="86" width="55" height="20" uuid="be2fd5ce-eec3-4436-b045-a73b18586ba3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta , ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="553" y="106" width="77" height="20" uuid="c0b4c7f2-e6bd-4778-a27a-0f630010be6c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Menyerahkan,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="149" width="120" height="20" uuid="6f697a9d-d1c5-4978-9d3b-be6122d0a280"/>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineStyle="Dotted"/>
+					<leftPen lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.75" lineStyle="Dotted"/>
+					<rightPen lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="149" width="120" height="20" uuid="0eb5feb8-e02e-4e43-9351-3e27f3b8607b"/>
+				<box>
+					<pen lineStyle="Dotted"/>
+					<topPen lineStyle="Dotted"/>
+					<leftPen lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.75" lineStyle="Dotted"/>
+					<rightPen lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="582" y="86" width="105" height="20" uuid="ef2b5b1c-6f55-4dbb-bcc9-9781447d0b1a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
